@@ -1,0 +1,24 @@
+Question 1
+When creating a pickled object, what type of file is created?
+1. DAT
+2. PY
+3. TXT
+4. CSV
+1
+2
+Question 2
+What is the purpose of a try/except?
+1. To create different methods in a class.
+2. To catch any potential errors that may occur.
+3. To create a key value pair in a data structure.
+4. To print words onto your screen.
+2
+2
+Question 3
+What happens when you use the 'w' mode on a file that already exists?
+1. It creates a duplicate file.
+2. It creates a new file with a different extension.
+3. It allows you to edit the file in a different application.
+4. It overwrites the content on the existing file.
+4
+2
