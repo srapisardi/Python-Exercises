@@ -67,8 +67,13 @@ class Blue(games.Sprite):
         self.score.value -= 1
         explode = Explosion(x = self.x, y = self.y)
         games.screen.add(explode)
+        if self.score.value > 0:
+            games.screen.add(self)
+            self.x = 40
+            self.y = games.screen.height/2
+
         if self.score.value == 0:
-            game_over - games.Message(value="Red Wins!",
+            game_over = games.Message(value="Red Wins!",
                                       size = 90,
                                       color = color.black,
                                       x = games.screen.width/2,
@@ -76,6 +81,8 @@ class Blue(games.Sprite):
                                       lifetime = 5 * games.screen.fps,
                                       after_death = games.screen.quit,
                                       is_collideable = False)
+
+            games.screen.add(game_over)
 
 
 class Red(games.Sprite):
@@ -138,6 +145,11 @@ class Red(games.Sprite):
         self.score.value -= 1
         explode = Explosion(x = self.x, y = self.y)
         games.screen.add(explode)
+        if self.score.value > 0:
+            games.screen.add(self)
+            self.x = games.screen.width - 40
+            self.y = games.screen.height/2
+
         if self.score.value == 0:
             game_over = games.Message(value = "Blue Wins!",
                                                  size = 90,
